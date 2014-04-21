@@ -23,10 +23,13 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## cacheSolve : This function executes the functions created in makeCacheMatrix function. 
 
-## if there is a matrix for m (that was already created during the initial run, it will be returned. 
+## cacheSolve function takes as the parameter the list that is created in "makeCacheMatrix" function. 
+## The function tried to retrieve m (which should be the inverse of a matrix). 
+## If m is a valid matrix, then it returns m and ends the function. 
 ## if there is no inverse calculation performed on m and is NULl, then it performs the following - 
-##  a) an inverse is calculated is performed
-## b) save the results into m 
+##  a) read the matrix information using the get function. 
+## b) calculate the inverse function using solve 
+## b) save the results of m into the cachedmemory using setinverse function.  
 ## c) Returnm the m value 
 
 cacheSolve <- function(x, ...) {
